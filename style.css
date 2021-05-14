@@ -1,20 +1,21 @@
 html {
-    height: 100vh;
-  }
-  
-  body {
-    height: 500vh;
-    background: #fff;
-  }
-  
-  canvas {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 100vw;
-    max-height: 100vh;
-  }
+  height: 100vh;
+}
+
+body {
+  height: 500vh;
+  background: #fff;
+}
+
+canvas {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
 
   .fa-apple:hover {
     color: white !important;
@@ -45,6 +46,25 @@ html {
   }
   
   .next-desc{
-      margin-top: 1510px !important;
-      z-index: 1001;
+    
+      margin-top: 381vh !important;
+      /* z-index: 1001; */
   }
+  .next-desc1{
+    margin-top: 200vh !important;
+}
+.uplifter{
+  margin-top: -40%;
+  
+}
+
+.retina{
+  padding-top: 25%;
+}
+
+.carousel-control-next{
+  position: absolute;
+  bottom: 0%;
+  left: 8% !important;
+}
+

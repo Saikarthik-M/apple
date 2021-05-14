@@ -3,7 +3,9 @@ const canvas = document.getElementById("laptop-opening");
 const context = canvas.getContext("2d");
 const toptext1 = document.getElementById("fade-while-scroll1");
 const toptext2 = document.getElementById("fade-while-scroll2");
-const frameCount = 148;
+const uplifter1 = document.getElementById("uplifter1");
+const chip1 = document.getElementById("chip1");
+const frameCount = 121;
 const currentFrame = index => (
     `images/scrollingtop/large_${index.toString().padStart(4, '0')}.jpg`
 )
@@ -42,10 +44,37 @@ window.addEventListener('scroll', () => {
         toptext1.style.opacity = 1 - scrollTop / 100;
         toptext2.style.opacity = 1 - scrollTop / 100;
     }
+    if (scrollTop >= 2800) {
+        canvas.style.position = "static";
+
+    }
+    else {
+        canvas.style.position = "fixed";
+
+    }
+    console.log(scrollTop);
+
+
 });
 
 preloadImages()
 
+$('#carouselExampleFade').carousel({
+    interval: 1000,
+    wrap: false
+});
 
+$('#carouselExampleFade').on('slid.bs.carousel', '', function () {
+    var $this = $(this);
+
+    $this.children('.carousel-control').show();
+
+    if ($('.carousel-inner .item:first').hasClass('active')) {
+        $this.children('.carousel-control-prev').hide();
+    } else if ($('.carousel-inner .item:last').hasClass('active')) {
+        $this.children('.carousel-control-next').hide();
+    }
+
+});
 
 
