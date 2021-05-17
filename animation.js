@@ -31,6 +31,7 @@ const updateImage = index => {
 }
 
 window.addEventListener('scroll', () => {
+    console.log(document.documentElement.scrollTop);
     const scrollTop = html.scrollTop;
     const maxScrollTop = html.scrollHeight - window.innerHeight;
     const scrollFraction = scrollTop / maxScrollTop;
@@ -52,8 +53,6 @@ window.addEventListener('scroll', () => {
         canvas.style.position = "fixed";
 
     }
-    console.log(scrollTop);
-
 
 });
 
@@ -76,5 +75,4 @@ $('#carouselExampleFade').on('slid.bs.carousel', '', function () {
     }
 
 });
-
 

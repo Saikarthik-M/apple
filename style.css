@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@500&display=swap');
 html {
   height: 100vh;
 }
@@ -62,7 +63,7 @@ canvas {
   padding-top: 25%;
 }
 
-.carousel-control-next{
+#carouselExampleFade .carousel-control-next{
   position: absolute;
   bottom: 0%;
   left: 8% !important;
