@@ -665,6 +665,26 @@
             </div>
         </div>
     </div>
+    <div id="pinContainer1">
+        <div class="panel first"
+            style="background-image: url('https://www.apple.com/v/macbook-pro-16/c/images/overview/keyboard_pro__cv0ow4wpj1km_large.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3 wow flash" style="top: 20%;left: 5%;position: absolute;">
+                        <h1>"Everything is where it should be, and everything makes sense."</h1>
+                        <p>Laure De Mey</p>
+                        <p>Game Developer
+                            ustwo games</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel third2"
+            style="background-image: url('https://www.apple.com/v/macbook-pro-16/c/images/overview/keyboard_hero__dlk5v7utj6ky_large.jpg');background-position: center;background-repeat: no-repeat;background-size: contain;">
+            <img src="" alt="">
+        </div>
+
+    </div>
     <div class="container">
         <div class="row pt-5">
             <div class="col-12 text-secondary" style="font-size: 2vw;font-weight: bold;">
@@ -1528,6 +1548,23 @@
                     .setPin("#pinContainer")
                     .setTween(wipeAnimation)
                     .addTo(controller);
+
+                var controller1 = new ScrollMagic.Controller();
+                // define movement of panels
+                var wipeAnimation1 = new TimelineMax()
+
+
+                    .fromTo("div.panel.third2", 1, { x: "100%" }, { x: "0%", ease: Linear.easeNone })  // in from right
+
+                // create scene to pin and link animation
+                new ScrollMagic.Scene({
+                    triggerElement: "#pinContainer1",
+                    triggerHook: "onLeave",
+                    duration: "200%"
+                })
+                    .setPin("#pinContainer1")
+                    .setTween(wipeAnimation1)
+                    .addTo(controller1);
             });
         </script>
 </body>
